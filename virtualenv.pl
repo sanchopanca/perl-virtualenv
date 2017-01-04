@@ -10,7 +10,7 @@ use File::Spec::Functions qw(file_name_is_absolute);
 use Cwd qw(abs_path);
 
 my $perl = $Config{perlpath};
-my $venv = shift || 'venv';
+my $venv = shift || '.venv';
 
 if (!file_name_is_absolute($venv)) {
     $venv = abs_path . "/$venv";
